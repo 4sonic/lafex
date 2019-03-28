@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<!-- Header -->
+{% include header.html %}
+<!-- End Header -->
+<div class="container">
+  <header class="header">
+    <h1 class="header-title">{{ page.title }}</h1>
+    <nav class="filter ">
+      <div class="row">
+        <div class="column">
+          <button type=button class="btn" data-filter="all">{{ site.solidsurface[page.lang].all }}</button>
+          <button type="button" class="btn" data-filter=".sink">{{ site.solidsurface[page.lang].sink }}</button>
+          <button type="button" class="btn" data-filter=".laudrysink">{{ site.solidsurface[page.lang].laudrysink }}</button>
+          <button type="button" class="btn" data-filter=".shower">{{ site.solidsurface[page.lang].shower }}</button>
+          <button type="button" class="btn" data-filter=".tarjas">{{ site.solidsurface[page.lang].tarjas }}</button>
+          <button type="button" class="btn" data-filter=".custom">{{ site.solidsurface[page.lang].custom }}</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="gallery results text-center">
+    {% for image in page.images %}
+    <div class="mix item {{ image.class }}">
+      <div class="columns excerpt" data-src="{{image.image}}" data-sub-html="{% if image.title %}{{image.title}}{% endif %} {% if image.title %}—{% endif %} {% if image.media %}{{image.media}}{% endif %}">
+        <small>{{ image.name }}<a href="{{image.image}}" ><img src="{{image.thumb}}" class="excerpt__image"></a></small>
+      </div>
+    </div>
+    {% endfor %}
+
+
+
+  </main>
+</div>

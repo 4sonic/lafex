@@ -1,0 +1,186 @@
+---
+layout: default
+---
+<!-- Hero -->
+<section class="hero" id="hero" style="background-image: url({{page.hero-image}})">
+
+
+
+</section>
+<!-- End Hero -->
+
+<!-- About -->
+<section class="about" id="about">
+
+  <div class="row align-center about__intro wow fadeInUp">
+  	<div class="medium-10 large-8 columns text-center">
+    	<h6 class="section__title show-for-small-only">About</h6>
+      <h2>{{page.about-title}}</h2>
+      <p>{{page.about-text}}</p>
+  	</div>
+  </div>
+
+
+
+</section>
+<!-- End About -->
+
+<!-- Hero Images -->
+<section class="hero-images" id="hero-images">
+  <div class="row align-center about__qualities wow fadeInUp">
+    {% for quality in page.about-qualities %}
+      <div class="small-12 medium-expand columns text-center">
+        <svg class="icon icon-{{ quality.icon }} icon-qualities"><use xlink:href="/assets/icons/symbol-defs.svg#icon-{{ quality.icon }}"></use></svg>
+        <h4>{{ quality.title }}</h4>
+        <p>{{ quality.text | markdownify}}</p>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+<!-- End Hero Images -->
+
+<!-- Speaking -->
+<section class="speaking" id="speaking">
+
+  <div class="row align-center speaking__intro wow fadeInUp">
+  	<div class="medium-10 large-8 columns text-center">
+    	<h6 class="section__title show-for-small-only">Speaking</h6>
+      <h2>{{page.speaking-title}}</h2>
+      <p>{{page.speaking-text}}</p>
+  	</div>
+  </div>
+
+  <div class="row align-center speaking__qualities wow fadeInUp">
+    {% for quality in page.speaking-qualities %}
+      <div class="small-12 medium-6 large-3 columns text-center">
+        <h4>{{ quality.title }}</h4>
+        {{ quality.text | markdownify}}
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="row align-center speaking__companies wow fadeInUp">
+  	<div class="medium-10 large-8 columns text-center">
+    	<p>{{page.speaking-brands}}</p>
+      <img src="/uploads/logos.svg">
+  	</div>
+  </div>
+
+</section>
+<!-- End Speaking -->
+
+
+<!-- Testimonials -->
+<section class="testimonials" id="testimonials">
+
+  <div class="row align-center testimonials__intro wow fadeInUp">
+  	<div class="medium-10 large-8 columns text-center">
+    	<h6 class="section__title show-for-small-only">Testimonials</h6>
+      <h2>{{page.clients-title}}</h2>
+      <p>{{page.clients-text}}</p>
+  	</div>
+  </div>
+
+  <div class="row align-center small-up-1 medium-up-2 large-up-4 wow fadeInUp" data-equalizer>
+    {% for client in page.clients-clients %}
+      <div class="columns text-center">
+        <div class="callout" data-equalizer-watch>
+          <svg class="icon icon-quote-open icon-quotes"><use xlink:href="/assets/icons/symbol-defs.svg#icon-quote-open"></use></svg>
+          <h4>{{ client.quote }}</h4>
+          <svg class="icon icon-quote-close icon-quotes"><use xlink:href="/assets/icons/symbol-defs.svg#icon-quote-close"></use></svg>
+          <p><small>{{ client.event }}</small></p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="row align-center testimonials__logos wow fadeInUp">
+  	<div class="medium-10 large-8 columns text-center">
+        <ul class="menu align-center">
+              <li><a href="{{link.href}}">{{link.title}}</a></li>
+        </ul>
+  	</div>
+  </div>
+
+</section>
+<!-- End Testimonials -->
+
+<!-- Book -->
+<section class="book" id="book">
+
+  <div class="row align-center book__intro wow fadeInUp">
+  	<div class="small-12 medium-12 large-6 columns">
+    	<h6 class="section__title show-for-small-only">Book</h6>
+      <h2>{{page.book-title}}</h2>
+      <p>{{page.book-text}}</p>
+      <a class="button" href="{{ page.fiberglass-link }}">{{ site.buttons[page.lang].collection }}</a>
+      <a class="button" data-open="book-request">{{ site.buttons[page.lang].sample }}</a>
+  	</div>
+
+  	<div class="small-12 medium-12 large-6 columns">
+      <img src="{{page.book-image}}">
+  	</div>
+
+  </div>
+
+</section>
+<!-- End Book -->
+
+<!-- Consultant -->
+<section class="consultant" id="consulting">
+
+  <div class="row align-center consultant__intro wow fadeInUp">
+  	<div class="medium-10 large-8 columns text-center">
+    	<h6 class="section__title show-for-small-only">Consulting</h6>
+      <h2>{{page.consultant-title}}</h2>
+      {{page.consultant-text | markdownify}}
+  	</div>
+  </div>
+
+  <div class="row align-center consultant__companies wow fadeInUp">
+    {% for company in page.consultant-company %}
+      <div class="small-6 medium-3 columns text-center consultant__company">
+        <!-- <h4>{{ company.company }}</h4> -->
+        <a href="{{company.link}}"><img src="{{company.image}}"></a>
+        <h4>{{ company.text | markdownify}}</h4>
+        <a class="hollow button secondary" href="{{ company.link }}">{{ site.buttons[page.lang].more }}</a>
+      </div>
+    {% endfor %}
+  </div>
+
+</section>
+<!-- End Consultant -->
+
+<!-- Call to Action -->
+<section class="cta" id="cta">
+  <div class="row align-center cta__intro wow fadeInUp">
+  	<div class="medium-10 large-8 columns text-center">
+      <h2>{{page.cta-title}}</h2>
+      <a href="{{ site.contactus[page.lang].contact.url }}" class="button">{{ site.buttons[page.lang].contact }}</a>
+  	</div>
+  </div>
+</section>
+<!-- End Call to Action -->
+
+<!--
+<section class="footer">
+<div class="row small-collapse expanded align-middle align-center footer__links wow fadeInUp">
+  <div class="shrink columns">
+    <ul class="menu align-center">
+    <li><a href="{{site.social.linkedin}}">LinkedIn</a></li>
+    </ul>
+  </div>
+</div>
+</section>
+-->
+
+
+<div class="reveal" id="book-request" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
+{% include bookrequest.html %}
+</div>
+
+<div class="reveal large" id="video" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
+<div class="responsive-embed widescreen">
+  <iframe src="https://player.vimeo.com/video/{{page.speaking-video}}?color=ffffff&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+</div>

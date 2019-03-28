@@ -1,0 +1,212 @@
+---
+title: Lafex
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: false
+# defaults:
+# - scope:
+#     path: ''
+#     type: projects
+#   values:
+#     image:
+#     video:
+#     company:
+#     runtime:
+#     director:
+#     producers:
+#     role:
+#     is-featured:
+url: http://www.lafex.com.mx/
+description:
+  en: Lafex is the largest independent company in Latin America, specialized in solid surface fabrication and creator of Bestone.
+  es: Lafex, es la compañía independiente más grande en Latinoamérica en la fabricación de productos de moldeados en Superficie Sólida y Fibras de vidrio creadora de Bestone.
+permalink: pretty
+exclude:
+- bower.json
+- package.json
+- config.codekit3
+- README*
+- LICENSE*
+- CHANGELOG*
+- node_modules
+- ".gitignore"
+- bower_components
+plugins:
+- jekyll-seo-tag
+- jekyll-sitemap
+- jekyll-feed
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+highlighter: rouge
+company: Lafex S.A. de C.V.
+email: info@lafex.com.mx
+google_site_verification:
+analytics:
+logo: "/assets/img/logo.svg"
+per_page: 12
+date_format: "%b %d, %Y"
+future: true
+social:
+  facebook: https://www.facebook.com/LafexBestone/
+  youtube: https://youtu.be/nItxgWiIBao/
+  twitter: https://www.twitter.com/LafexBestone/
+compress_html:
+  comments:
+  - "<!-- "
+  - " -->"
+  blanklines: true
+  profile: false
+index:
+  en:
+  es:
+feed:
+  en:
+  es:
+translate:
+  en:
+    fiberglass: "Fiberglass"
+    solidsurface: "Solid surface"
+    contact: "contact us"
+    connect: "connect"
+    copyright: "Copyright All rights reserved."
+    credits: ""
+  es:
+    fiberglass: "Fibra de vidrio"
+    solidsurface: "Superficie solida"
+    contact: "contactar"
+    connect: "redes sociales"
+    copyright: "Copyright Todos los derechos reservados."
+footer-left:
+  en:
+    about:
+      name: "About"
+      url: "/faq"
+    documentation:
+      name: "Documentation"
+      url: "/"
+    Privacy:
+      name: "Notice of Privacy"
+      url: "/"
+    Legal:
+      name: "Legal Notices"
+      url: "/"
+  es:
+    about:
+      name: "Nosotros"
+      url: "/#about"
+    documentation:
+      name: "Documentacion"
+      url: "/"
+    Privacy:
+      name: "Privacidad"
+      url: "/"
+    Legal:
+      name: "Avisos Legales"
+      url: "/"
+solid-surface:
+  en:
+    info:
+      name: "Info"
+      url: "/info"
+    products:
+      name: "Products"
+      url: "/solid-surface"
+    gallery:
+      name: "Gallery"
+      url: "/"
+    colors:
+      name: "Colors"
+      url: "/colors"
+  es:
+    info:
+      name: "Informacion"
+      url: "/informacion"
+    products:
+      name: "Productos"
+      url: "/superficie-solida"
+    gallery:
+      name: "Galeria"
+      url: "/"
+    colors:
+      name: "Colores"
+      url: "/colores"
+fiber-glass:
+  en:
+    info:
+      name: "Info"
+      url: "/info"
+    products:
+      name: "Products"
+      url: "/"
+    gallery:
+      name: "Gallery"
+      url: "/"
+
+  es:
+    info:
+      name: "Informacion"
+      url: "/informacion"
+    products:
+      name: "Productos"
+      url: "/"
+    gallery:
+      name: "Galeria"
+      url: "/"
+
+fiberglass:
+  en:
+    all: all
+    garbage: garbage cans
+    decoration: decoration articles
+    pots: pots
+    furniture: furniture
+  es:
+    all: mostrar todo
+    garbage: basureros
+    decoration: decoración
+    pots: macetas
+    furniture: muebles
+solidsurface:
+  en:
+    all: all
+    sink: sink
+    laudrysink: laundry sink
+    shower: shower
+    tarjas: tarjas
+    custom: custom product
+  es:
+    all: mostrar todo
+    sink: lavabos
+    laudrysink: lavaderos
+    shower: regaderas
+    tarjas: tarjas
+    custom: producto especial
+
+contactus:
+  en:
+    contact:
+      name: contact us
+      url: "/contact"
+  es:
+    contact:
+      name: contacto
+      url: "/contacto"
+
+copyright:
+  en:
+    copyright: All rights reserved. 2018
+  es:
+    copyright: Todos los derechos reservados. 2018
+
+buttons:
+  en:
+    more: Read more
+  es:
+    more: Leer más

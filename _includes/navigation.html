@@ -1,0 +1,41 @@
+{% for entry in site.data.navigation %}{% capture fullurl %}{{ site.baseurl }}{{ entry.url }}{% endcapture %}{% if fullurl == page.url %}{% assign current_page = fullurl %}{% break %}{% elsif page.url contains fullurl %}{% assign current_page = fullurl %}{% endif %}{% endfor %}
+
+<!-- Navigation -->
+<div class="navigation navigation--light top-bar row small-collapse expanded align-middle align-justify">
+  <div class="shrink columns top-bar-menu show-for-large">
+    <ul class="menu">
+       <a href="/"><svg class="icon icon-icon"><use xlink:href="/assets/icons/symbol-defs.svg#icon-icon"></use></svg></a>
+        {% for menu in site.data.navigation[page.lang] %}
+        <li class="list-inline">
+            <a href="{{ menu[1].url }}">{{ menu[1].title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+  </div>
+
+
+  <div class="shrink columns top-bar-title">
+    <ul class="menu">
+      {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
+      {% for post in posts %}
+        <li>
+          <a href="{{ post.url }}" class="{{ post.lang }}">{{ post.lang }}</a>
+        </li>
+      {% endfor %}
+
+      {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+      {% for page in pages %}
+        <li>
+          <a href="{{ page.url }}" class="{{ page.lang }}">{{ page.lang }}</a>
+        </li>
+      {% endfor %}
+      </ul>
+  </div>
+
+  <div class="shrink columns hide-for-large top-bar-menu-mobile">
+    <button class="hamburger hamburger--slider" data-toggler=".is-active" id="toggle" type="button" data-toggle="overlay-mobile toggle">
+      <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+    </button>
+  </div>
+</div>
+<!-- End Navigation -->

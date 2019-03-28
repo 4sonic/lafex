@@ -1,0 +1,39 @@
+---
+layout: default
+---
+<!-- Header -->
+{% include header.html %}
+<!-- End Header -->
+<section class="info">
+  <div class="row align-center">
+    <div class="medium-10 large-10 columns">
+    	<h2>{{page.info}}</h2>
+      <p>{{page.info-text}}</p>
+    </div>
+  </div>
+</section>
+
+<section class="services__services">
+  <div class="row align-center">
+    <div class="medium-10 large-10 columns">
+    <div class="row small-up-1 medium-up-2">
+      <div class="columns services__service">
+        <h3>{{ page.info-title }}</h3>
+        <p>{{ page.info-comercial }}</p>
+      </div>
+      <div class="columns services__service">
+        <h3>{{ page.info-product-title }}</h3>
+        <p>{{ page.info-producto }}</p>
+      </div>
+      <div class="columns services__service">
+      <h3>{{ page.technical-data }}</h3>
+      <a href="" class="button">{{ site.buttons[page.lang].more }}</a>
+      </div>
+      <div class="columns services__service">
+      <h3>{{ page.data-sheet }}</h3>
+      <a href="/datos-de-seguridad/" class="button">{{ site.buttons[page.lang].more }}</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>

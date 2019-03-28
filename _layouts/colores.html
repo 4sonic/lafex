@@ -1,0 +1,61 @@
+---
+layout: default
+---
+<!-- Header -->
+{% include header.html %}
+<!-- End Header -->
+<section class="gallery text-center">
+  <h2>Solid</h2>
+  <div class="row small-up-4 medium-up-4 large-up-6" class="gallery">
+    {% for image in page.images-solid %}
+    <div class="columns excerpt" data-src="{{image.image}}" data-sub-html="{% if image.title %}{{image.title}}{% endif %} {% if image.title %}—{% endif %} {% if image.media %}{{image.media}}{% endif %}">
+      <a href="{{image.image}}" ><img src="{{image.image}}" class="excerpt__image"></a>
+      <h6>{{image.title}}</h6>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+<section class="gallery text-center">
+  <h2>Matrix</h2>
+  <div class="row small-up-4 medium-up-4 large-up-6" class="gallery">
+    {% for image in page.images-matrix %}
+    <div class="columns excerpt" data-src="{{image.image}}" data-sub-html="{% if image.title %}{{image.title}}{% endif %} {% if image.title %}—{% endif %} {% if image.media %}{{image.media}}{% endif %}">
+      <a href="{{image.image}}" ><img src="{{image.image}}" class="excerpt__image"></a>
+      <h6>{{image.title}}</h6>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+<section class="gallery text-center">
+  <h2>Granite</h2>
+  <div class="row small-up-4 medium-up-4 large-up-6" class="gallery">
+    {% for image in page.images-granite %}
+    <div class="columns excerpt" data-src="{{image.image}}" data-sub-html="{% if image.title %}{{image.title}}{% endif %} {% if image.title %}—{% endif %} {% if image.media %}{{image.media}}{% endif %}">
+      <a href="{{image.image}}" ><img src="{{image.image}}" class="excerpt__image"></a>
+      <h6>{{image.title}}</h6>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+<section class="gallery text-center">
+  <h2>Premium</h2>
+  <div class="row small-up-4 medium-up-4 large-up-6" class="gallery">
+    {% for image in page.images-premium %}
+    <div class="columns excerpt" data-src="{{image.image}}" data-sub-html="{% if image.title %}{{image.title}}{% endif %} {% if image.title %}—{% endif %} {% if image.media %}{{image.media}}{% endif %}">
+      <a href="{{image.image}}" ><img src="{{image.image}}" class="excerpt__image"></a>
+      <h6>{{image.title}}</h6>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+<section class="gallery text-center">
+  <h2>Natural</h2>
+  <div class="row small-up-4 medium-up-4 large-up-6" class="gallery">
+    {% for image in page.images-natural %}
+    <div class="columns excerpt" data-src="{{image.image}}" data-sub-html="{% if image.title %}{{image.title}}{% endif %} {% if image.title %}—{% endif %} {% if image.media %}{{image.media}}{% endif %}">
+      <a href="{{image.image}}" ><img src="{{image.image}}" class="excerpt__image"></a>
+      <h6>{{image.title}}</h6>
+    </div>
+    {% endfor %}
+  </div>
+</section>

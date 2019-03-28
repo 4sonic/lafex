@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<div class="row align-center about__intro wow fadeInUp">
+	<div class="medium-10 large-8 columns text-center">
+  	<h6 class="section__title show-for-small-only">About</h6>
+    <h2>{{page.products-title}}</h2>
+    <p>{{page.products-text}}</p>
+	</div>
+</div>
+
+<!-- Consultant -->
+<section class="coleccion-productos" id="coleccion-productos">
+  <div class="row align-center">
+    {% for coleccion in page.coleccion-productos %}
+      <div class="small-6 medium-6 columns text-center">
+        <h4>{{ coleccion.producto }}</h4>
+        <a href="{{coleccion.link}}" target="_blank"><img src="{{coleccion.image}}"></a>
+        <p>{{ company.text | markdownify}}</p>
+        <a class="hollow button secondary" href="{{ company.link }}" target="_blank">Learn More</a>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+  <!-- End Consultant -->
